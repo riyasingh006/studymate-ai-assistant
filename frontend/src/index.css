@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Design tokens.
+  The application is dark-first; `.dark` is applied on <html> by default.
+  `:root` holds the light theme so it works without JavaScript as well.
+
+  Colors are stored as RGB triplets (e.g. "0 214 201") so Tailwind can apply
+  opacity modifiers via `rgb(var(--token-rgb) / <alpha-value>)`.
+*/
+
+:root {
+  color-scheme: light;
+  --canvas-rgb: 244 248 251;
+  --canvas-2-rgb: 233 241 246;
+  --card-rgb: 255 255 255;
+  --elevated-rgb: 255 255 255;
+  --brand-rgb: 0 168 157;
+  --brand-strong-rgb: 0 143 134;
+  --accent-rgb: 8 145 178;
+  --ink-rgb: 11 29 42;
+  --ink-2-rgb: 62 85 102;
+  --ink-3-rgb: 107 132 150;
+  --line-rgb: 216 226 234;
+  --success-rgb: 5 150 105;
+  --warning-rgb: 217 119 6;
+  --error-rgb: 220 38 38;
+  --shadow: 0 1px 2px rgba(6, 19, 31, 0.06), 0 4px 12px rgba(6, 19, 31, 0.05);
+  --shadow-lg: 0 2px 4px rgba(6, 19, 31, 0.06), 0 16px 40px rgba(6, 19, 31, 0.12);
+  --ring: rgba(0, 168, 157, 0.4);
+}
+
+.dark {
+  color-scheme: dark;
+  --canvas-rgb: 6 19 31;
+  --canvas-2-rgb: 11 31 42;
+  --card-rgb: 16 39 51;
+  --elevated-rgb: 20 47 59;
+  --brand-rgb: 0 214 201;
+  --brand-strong-rgb: 0 184 173;
+  --accent-rgb: 34 211 238;
+  --ink-rgb: 241 245 249;
+  --ink-2-rgb: 168 186 199;
+  --ink-3-rgb: 125 146 159;
+  --line-rgb: 28 54 68;
+  --success-rgb: 16 185 129;
+  --warning-rgb: 245 158 11;
+  --error-rgb: 239 68 68;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 2px 4px rgba(0, 0, 0, 0.4), 0 20px 48px rgba(0, 0, 0, 0.5);
+  --ring: rgba(34, 211, 238, 0.4);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas text-ink antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv11';
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: rgb(var(--brand-rgb));
+    color: #04121c;
+  }
+
+  /* Subtle scrollbars that match the theme. */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--line-rgb)) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: rgb(var(--line-rgb));
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-delay: 0s !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Thematic link used across landing + app pages. */
+  .link {
+    @apply font-medium text-brand underline-offset-4 transition;
+  }
+
+  .link:hover {
+    @apply underline;
+  }
+
+  /* Film-grain texture used by the landing page background. */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Screen-reader-only utility. */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}

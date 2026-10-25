@@ -1,0 +1,31 @@
+# --- Secrets ---
+# Never commit real environment files (they hold the Gemini API key).
+.env
+.env.local
+*.env
+
+# --- Python virtual environments ---
+.venv/
+venv/
+env/
+
+# --- Python caches / build artifacts ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+build/
+dist/
+
+# --- Test / coverage output ---
+.coverage
+htmlcov/
+
+# --- Frontend (if built inside this repo) ---
+node_modules/
+dist/
+dist-ssr/
+.vite/

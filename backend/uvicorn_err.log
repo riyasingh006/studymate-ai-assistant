@@ -1,0 +1,6 @@
+INFO:     Started server process [2628]
+INFO:     Waiting for application startup.
+2026-10-25 13:56:06,753 | INFO | ai_studymate | Starting AI StudyMate API (env=development)
+2026-10-25 13:56:06,753 | INFO | ai_studymate | Gemini API key detected (model=gemini-flash-lite-latest).
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
