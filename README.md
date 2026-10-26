@@ -1,4 +1,4 @@
-# 🚀 ShadowFox — AI-Powered StudyMate Assistant
+# 🚀 AI-Powered StudyMate Assistant
 
 <p align="center">
   <strong>An AI-powered learning assistant designed to make studying smarter, faster, and more effective.</strong>
@@ -15,7 +15,7 @@
 
 ## 📌 Overview
 
-**ShadowFox — StudyMate AI Assistant** is an AI-powered educational application built to support students in understanding concepts, processing study materials, and improving their learning experience.
+** StudyMate AI Assistant** is an AI-powered educational application built to support students in understanding concepts, processing study materials, and improving their learning experience.
 
 The project combines a frontend interface with a Python-based backend and AI integration to provide an interactive environment for AI-assisted learning.
 
