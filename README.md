@@ -5,7 +5,6 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Project-ShadowFox-blueviolet?style=for-the-badge" alt="Project">
   <img src="https://img.shields.io/badge/Python-Backend-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/AI-Gemini-orange?style=for-the-badge&logo=google" alt="Gemini AI">
   <img src="https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge" alt="Status">
@@ -15,7 +14,7 @@
 
 ## 📌 Overview
 
-** StudyMate AI Assistant** is an AI-powered educational application built to support students in understanding concepts, processing study materials, and improving their learning experience.
+StudyMate AI Assistant is an AI-powered educational application built to support students in understanding concepts, processing study materials, and improving their learning experience.
 
 The project combines a frontend interface with a Python-based backend and AI integration to provide an interactive environment for AI-assisted learning.
 
