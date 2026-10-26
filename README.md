@@ -1,5 +1,5 @@
 <p align="center">
-  <strong>🚀 AI-Powered StudyMate Assistant.</strong>
+  <strong>#🚀 AI-Powered StudyMate Assistant.</strong>
 </p>
 
 <p align="center">
