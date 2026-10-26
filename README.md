@@ -1,6 +1,4 @@
-<p align="center">
-  <strong> ## 🚀 AI-Powered StudyMate Assistant.</strong>
-</p>
+<h1 align="center">🚀 AI-Powered StudyMate Assistant</h1>
 
 <p align="center">
   <strong>An AI-powered learning assistant designed to make studying smarter, faster, and more effective.</strong>
