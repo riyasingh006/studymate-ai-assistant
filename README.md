@@ -1,4 +1,4 @@
-# 🚀 AI-Powered StudyMate Assistant
+              # 🚀 AI-Powered StudyMate Assistant
 
 <p align="center">
   <strong>An AI-powered learning assistant designed to make studying smarter, faster, and more effective.</strong>
