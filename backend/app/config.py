@@ -30,7 +30,11 @@ class Settings(BaseSettings):
     app_env: str = "development"
 
     # Raw comma-separated string from the environment (see `allowed_origins_list`).
-    allowed_origins: str = "http://localhost:5173,http://127.0.0.1:5173"
+    allowed_origins: str = (
+        "http://localhost:5173,"
+        "http://127.0.0.1:5173,"
+        "https://studymate-ai-assistant.vercel.app"
+    )
 
     model_config = SettingsConfigDict(
         env_file=".env",
